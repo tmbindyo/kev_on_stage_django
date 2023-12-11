@@ -1,0 +1,54 @@
+{% load static %}
+
+<header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img src="{% static 'glint/images/kev_on_stage_logo.jpg ' %}" alt="Homepage">
+            </a>
+        </div>
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+
+                <ul class="header-nav__list">
+                    <li class="current"><a href="{% url 'landing' %" title="home">Home</a></li>
+                    <li><a href="{% url 'landing-studio-space' %" title="services">Studio Space</a></li>
+                    <li><a href="{% url 'landing-listen' %}" title="works">Listen</a></li>
+                    <li><a href="https://kevonstage.myshopify.com/" target="_blank" title="works">Shop</a></li>
+                </ul>
+
+                <p>KevOnStage: Where laughter takes center stage!</p>
+
+                <ul class="header-nav__social">
+                    <li>
+                        <a href="https://facebook.com/kevonstage"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/kevonstage"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/kevonstage"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/user/kevonstage"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://patreon.com/kevonstage"><i class="fa-brands fa-patreon" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+
+            </div> <!-- end header-nav__content -->
+
+        </nav>  <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> 
