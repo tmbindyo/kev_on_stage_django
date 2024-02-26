@@ -23,6 +23,9 @@ class Command(BaseCommand):
 
         # Seed the database
         for data in user_data:
-            User.objects.create(**data)
-
-        self.stdout.write(self.style.SUCCESS(f'Successfully seeded User model'))
+            # Check if the User record already exists
+            if not User.objects.filter(id=data['id']).exists():
+                User.objects.create(**data)
+                self.stdout.write(self.style.SUCCESS(f'Successfully seeded User model with ID {data["id"]}'))
+            else:
+                self.stdout.write(self.style.WARNING(f'User model with ID {data["id"]} already exists'))

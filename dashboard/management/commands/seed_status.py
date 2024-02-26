@@ -35,6 +35,9 @@ class Command(BaseCommand):
 
         # Seed the database
         for data in status_data:
-            Status.objects.create(**data)
-
-        self.stdout.write(self.style.SUCCESS(f'Successfully seeded Status model'))
+            # Check if the Status record already exists
+            if not Status.objects.filter(id=data['id']).exists():
+                Status.objects.create(**data)
+                self.stdout.write(self.style.SUCCESS(f'Successfully seeded Status model with ID {data["id"]}'))
+            else:
+                self.stdout.write(self.style.WARNING(f'Status model with ID {data["id"]} already exists'))
