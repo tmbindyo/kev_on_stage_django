@@ -30,7 +30,7 @@ version: '3'
 services:
   web:
     build: .
-    command: sh -c "python manage.py collectstatic --noinput && python manage.py migrate && python manage.py seed_user && python manage.py seed_status && python manage.py runserver 0.0.0.0:8000"
+    command: sh -c "python manage.py collectstatic --noinput && python manage.py migrate && python manage.py seed_user && python manage.py seed_status && python manage.py seed_tour && python manage.py runserver 0.0.0.0:8000"
     environment:
       DEBUG: 'True'
       SECRET_KEY: "dwu!!7agg6=7w0qh1_-#328e0v9%^r#%sv&scbod$w&=-buj)k"

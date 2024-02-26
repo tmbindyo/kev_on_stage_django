@@ -180,9 +180,9 @@
                 <div class="table tickets-sale-table">
                     <table>
                         <tbody>
-                            {% for tour in tours %}
+                            {% for tours in tour %}
                                 <tr>
-                                    <td>{{ tour.date }}, {{ tour.time }}</td>
+                                    <td>{{ tour.date }}, {{ tour.date }}</td>
                                     <td>{{tour.location}}</td>
                                     <td>{{tour.venue}}</td>
                                     <td>
@@ -666,10 +666,69 @@
 
 
 
-
-
-
     <!-- kev-on-stage-studios
+    ================================================== -->
+    <section id="kev-on-stage-studios" class="s-kev-on-stage-studios target-section" data-parallax="scroll" data-image-src="{% static 'glint/images/kev_on_stage_studios_s2000.jpg' %}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="kev-on-stage-studios-content">
+
+            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead">Kev On Stage Studios.</h3>
+                    <!-- <h1 class="display-2">Digital creators. Premium content. Unapologetically Black.</h1> -->
+                </div>
+            </div> <!-- end section-header -->
+
+            <div class="row kev-on-stage-studios-content__main">
+
+                <!-- <h3>Kev On Stage Studios.</h3> -->
+
+                <h1>
+                    Digital creators. Premium content. Unapologetically Black.
+                </h1>
+
+                <div class="kev-on-stage-studios-content__buttons">
+                    <a href="#contact" class="smoothscroll btn btn--stroke">
+                        Start Your Free Trial
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="kev-on-stage-studios-content__scroll">
+                <a href="#contact" class="scroll-link smoothscroll">
+                    <span>Scroll Down</span>
+                </a>
+            </div>
+
+            <div class="kev-on-stage-studios-content__line"></div>
+
+        </div> <!-- end kev-on-stage-studios-content -->
+
+        <ul class="kev-on-stage-studios-social">
+            <h3>Available On</h3>
+            <li>
+                <a href="#"><i class="fa-brands fa-apple" aria-hidden="true"></i><span>Android</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-brands fa-android" aria-hidden="true"></i><span>Android</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-desktop" aria-hidden="true"></i><span>Desktop</span></a>
+            </li>
+        </ul>
+
+
+    </section> <!-- end s-kev-on-stage-studios -->
+
+
+
+
+
+    <!-- home
     ================================================== -->
     <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{% static 'glint/images/kev_on_stage_studios_s2000.jpg' %}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
@@ -684,7 +743,7 @@
                 <h1 style="color: #FFFFFF;" class="display-2">Digital creators. Premium content. Unapologetically Black.</h1>
 
                 <div class="kev-on-stage-studios-content__buttons">
-                    <a href="https://kevonstage.vhx.tv" target="_blank" class="btn btn--stroke">
+                    <a href="#contact" class="smoothscroll btn btn--stroke">
                         Start Your Free Trial
                     </a>
                 </div>

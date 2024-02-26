@@ -27,6 +27,7 @@ class Tour(DeletionMarkerMixin, HistoricalDataMixin, TimestampMixin):
     venue = models.CharField(max_length=255)
     link = models.CharField(max_length=255)
     clicks = models.IntegerField(default=0)
+    is_sold_out = models.BooleanField(default=False)
 
     status_id = models.IntegerField()  # Adjust this field based on your specific requirements
     user = models.ForeignKey(
@@ -37,7 +38,7 @@ class Tour(DeletionMarkerMixin, HistoricalDataMixin, TimestampMixin):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.name
+        return f'{self.name} @ {self.date} {self.time}'
 
 
 
