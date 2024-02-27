@@ -4713,6 +4713,485 @@ html.no-csstransitions .kev-on-stage-studios-content__main {
 
 
 
+/* ===================================================================
+ * # studios
+ *
+ * ------------------------------------------------------------------- */
+ .s-studios {
+    width: 100%;
+    height: 100%;
+    min-height: 786px;
+    background-color: transparent;
+    position: relative;
+    display: table;
+}
+
+.s-studios .shadow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
+}
+
+.s-studios .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    background-color: #000000;
+}
+
+.no-js .s-studios {
+    background: #000000;
+}
+
+
+/* -------------------------------------------------------------------
+ * ## studios content
+ * ------------------------------------------------------------------- */
+.studios-content {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    padding-bottom: 15.6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.studios-content h3 {
+    font-family: "montserrat-medium", sans-serif;
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    margin-left: 6px;
+}
+
+.studios-content h1 {
+    font-family: "montserrat-medium", sans-serif;
+    font-size: 6.3rem;
+    line-height: 1.333;
+    margin-top: 0;
+    color: #FFFFFF;
+}
+
+.studios-content__main {
+    padding-top: 24rem;
+    position: relative;
+}
+
+.studios-content__buttons {
+    padding-top: 6rem;
+    text-align: left;
+}
+
+.studios-content__buttons .btn {
+    width: 225px;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    margin: 1.5rem 1.5rem 0 0;
+    letter-spacing: .25rem;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.studios-content__buttons .btn:last-child {
+    margin-right: 0;
+}
+
+.studios-content__buttons .btn:hover,
+.studios-content__buttons .btn:focus {
+    background: #FFFFFF !important;
+    color: #000000;
+}
+
+.studios-content__scroll {
+    position: absolute;
+    right: 9.5rem;
+    bottom: 8.4rem;
+}
+
+.studios-content__scroll a {
+    font-family: "montserrat-semibold", sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    color: #FFFFFF;
+    position: relative;
+    display: inline-block;
+    line-height: 3rem;
+    padding-left: 2.5rem;
+}
+
+.studios-content__scroll a::before {
+    border-bottom: 2px solid #ec4439;
+    border-right: 2px solid #ec4439;
+    content: '';
+    display: block;
+    height: 8px;
+    width: 8px;
+    margin-top: -6px;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform-origin: 66% 66%;
+    -ms-transform-origin: 66% 66%;
+    transform-origin: 66% 66%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+.studios-content__line {
+    display: block;
+    width: 2px;
+    height: 10.2rem;
+    background-color: #ec4439;
+    position: absolute;
+    right: 7.2rem;
+    bottom: 0;
+}
+
+
+/* -------------------------------------------------------------------
+ * ## studios social
+ * ------------------------------------------------------------------- */
+.studios-social {
+    font-family: "montserrat-regular", sans-serif;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    right: 5.4rem;
+    -webkit-transform: translate3d(0, -50%, 0);
+    -ms-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+}
+
+.studios-social a {
+    color: white;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.studios-social li {
+    position: relative;
+    padding: .9rem 0;
+}
+
+.studios-social li a {
+    display: block;
+    width: 33px;
+    height: 33px;
+}
+
+.studios-social i, .studios-social span {
+    position: absolute;
+    top: 0;
+    line-height: 33px;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.studios-social i {
+    font-size: 14px;
+    right: 0;
+    text-align: center;
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    line-height: calc(33px - 4px);
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+}
+
+.studios-social span {
+    color: #ec4439;
+    right: 4.5rem;
+    font-size: 1.3rem;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+}
+
+.studios-social li:hover span {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+
+/* animate .studios-content__main
+ * ------------------------------------------------------------------- */
+html.cl-preload .studios-content__main {
+    opacity: 0;
+}
+
+html.cl-loaded .studios-content__main {
+    animation-duration: 2s;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+html.no-csstransitions .studios-content__main {
+    opacity: 1;
+}
+
+
+/* -------------------------------------------------------------------
+ * ## studios animations
+ * ------------------------------------------------------------------- */
+
+
+/* fade in */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 150%, 0);
+        -ms-transform: translate3d(0, 150%, 0);
+        transform: translate3d(0, 150%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 150%, 0);
+        -ms-transform: translate3d(0, 150%, 0);
+        transform: translate3d(0, 150%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* fade out */
+
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -150%, 0);
+        -ms-transform: translate3d(0, -150%, 0);
+        transform: translate3d(0, -150%, 0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -150%, 0);
+        -ms-transform: translate3d(0, -150%, 0);
+        transform: translate3d(0, -150%, 0);
+    }
+}
+
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * studios
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width: 1500px) {
+    .studios-content h1 {
+        font-size: 6rem;
+    }
+    .studios-content__main {
+        max-width: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .studios-content h1 {
+        font-size: 5.5rem;
+    }
+    .studios-content__main {
+        max-width: 800px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .studios-content h1 {
+        font-size: 4.6rem;
+    }
+    .studios-content br {
+        display: none;
+    }
+    .studios-content__main {
+        padding-top: 21rem;
+        padding-right: 80px;
+        max-width: 680px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .studios-content h3 {
+        font-size: 1.5rem;
+    }
+    .studios-content h1 {
+        font-size: 4rem;
+    }
+    .studios-content__main {
+        padding-right: 70px;
+        max-width: 550px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .studios-content__main {
+        max-width: 490px;
+    }
+    .studios-content__buttons {
+        padding-top: 1.2rem;
+        text-align: center;
+    }
+    .studios-content__buttons .btn {
+        display: block;
+        width: 70%;
+        margin: 1.5rem 0 0 0;
+    }
+    .studios-social {
+        right: 4rem;
+    }
+    .studios-content__scroll {
+        right: 7.5rem;
+    }
+    .studios-content__line {
+        right: 5.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .studios-content h1 {
+        font-size: 3.8rem;
+    }
+    .studios-social {
+        right: 2rem;
+    }
+    .studios-social li {
+        padding: .6rem 0;
+    }
+    .studios-social i {
+        font-size: 17px;
+        border: none;
+    }
+    .studios-social span {
+        display: none;
+    }
+    .studios-content__scroll {
+        bottom: 5.4rem;
+    }
+    .studios-content__line {
+        height: 7.2rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .s-studios {
+        min-height: 642px;
+    }
+    .studios-content h1 {
+        font-size: 3.5rem;
+    }
+    .studios-content__main {
+        text-align: center;
+        max-width: none;
+        padding-top: 15rem;
+        padding-right: 25px;
+        width: 85%;
+    }
+    .studios-content__buttons {
+        padding-top: 1.2rem;
+    }
+    .studios-content__buttons .btn {
+        width: auto;
+        margin: 1.5rem 0 0 0;
+    }
+    .studios-social {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .studios-content h1 {
+        font-size: 3.3rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .s-studios {
+        min-height: 630px;
+    }
+    .studios-content h1 {
+        font-size: 3.2rem;
+    }
+    .studios-content__main {
+        padding-top: 16.2rem;
+        width: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
