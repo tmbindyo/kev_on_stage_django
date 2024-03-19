@@ -8,18 +8,14 @@ from dashboard.models import Tour
 # Create your views here.
 def landingFunction(request):
     now = datetime.now()
-    get_tours = Tour.objects.all()
-    print(f"get_tours:{get_tours}")
+    # get_tours = Tour.objects.all()
+    # print(f"get_tours:{get_tours}")
 
 
     # Filter tours where is_sold_out is False and the date is greater than or equal to today
-    tours = Tour.objects.filter(is_sold_out=False, date__gte=now.date(), time__gte=now.time()).filter(
-        # Filter tours where the date is either today and the time is greater than or equal to now
-        # or the date is in the future
-        Q(date=now.date(), time__gte=now.time()) | Q(date__gt=now.date())
-    )
+    tours = Tour.objects.filter(is_sold_out=False, date__gte=now.date(), time__gte=now.time())
 
-    print(f"tours:{tours}")
+    # print(f"tours:{tours}")
     context = {
         "tours":tours,
     }
